@@ -1,0 +1,76 @@
+﻿@model IEnumerable<SolrPractice.Models.PhotoSearch>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table>
+    <thead>
+        <tr>
+
+            <th style="width: 50px">
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th style="width:50px">
+                @Html.DisplayNameFor(model => model.ProductId)
+            </th>
+
+
+            <th style="width:200px">
+                @Html.DisplayNameFor(model => model.PhotoId)
+            </th>
+            <th style="width:200px">
+                @Html.DisplayNameFor(model => model.MultiPhotoTypeId)
+            </th>
+
+
+            <th style="width:200px">
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th style="width:200px">
+                @Html.DisplayNameFor(model => model._version_)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td style="width:50px">
+
+                    @Html.DisplayFor(modelItem => item.Name[0]))
+                </td>
+                <td style="width:200px">
+                    @Html.DisplayFor(modelItem => item.ProductId)
+                </td>
+
+
+                <td style="width:200px">
+                    @Html.DisplayFor(modelItem => item.PhotoId)
+                </td>
+                <td style="width:200px">
+                    @Html.DisplayFor(modelItem => item.MultiPhotoTypeId)
+                </td>
+
+                <td style="width:200px">
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td style="width:200px">
+                    @Html.DisplayFor(modelItem => item._version_)
+                </td>
+                <td style="width:200px">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item._version_ }) |
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
