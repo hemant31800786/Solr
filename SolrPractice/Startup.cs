@@ -29,8 +29,7 @@ namespace SolrPractice
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            //  services.AddSolrNet("http://192.168.212.146:8983/solr");
-            //   services.AddSolrNet<PhotoSearch>("http://192.168.212.146:8983/solr/PhotoServiceSearchPhoto");
+
 
 
             services.AddSolrNet("http://localhost:8983/solr");
